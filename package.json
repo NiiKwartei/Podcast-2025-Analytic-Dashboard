@@ -1,0 +1,19 @@
+{
+  "name": "first-love-church-podcast-analytics",
+  "version": "1.0.0",
+  "description": "Analytics dashboard for First Love Church Podcast showing global reach and download statistics",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "analytics",
+    "dashboard",
+    "podcast",
+    "church",
+    "statistics"
+  ],
+  "author": "First Love Church",
+  "license": "MIT"
+}

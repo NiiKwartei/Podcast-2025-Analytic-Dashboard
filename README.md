@@ -1,53 +1,118 @@
-# First Love Church Podcast Analytics Dashboard
+# First Love Church Podcast - Analytics Dashboard
 
-A beautiful, interactive analytics dashboard for tracking the First Love Church Podcast's global reach and impact.
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/NiiKwartei/Podcast-2025-Analytic-Dashboard)
 
-## Features
+A beautiful, modern analytics dashboard tracking the global reach and impact of the First Love Church Podcast.
 
-✨ **Interactive Visualizations**
-- Monthly download trends with animated line charts
-- Platform distribution with pie charts
-- Top 15 countries by downloads with horizontal bar charts
-- Real-time statistics cards
+## 🚀 Features
+
+- **Interactive Global Map**: Visualize downloads across 15+ countries with custom markers
+- **Real-time Statistics**: Track total downloads, monthly averages, and platform distribution
+- **Modern Dark Theme**: Sleek purple and blue color scheme with glass morphism effects
+- **Responsive Design**: Optimized for desktop viewing with proper chart sizing
+- **Platform Analytics**: Detailed breakdown of iOS, Android, and other platform usage
+
+📊 **Analytics Overview**
+- Total Downloads: 155,798
+- Monthly Average: 12,983
+- Top Country: United Kingdom (62,058 downloads)
+- Top Platform: iOS (124,120 downloads)
 
 🎨 **Distinctive Design**
-- Church-inspired color palette (burgundy and gold)
+- Modern dark theme with purple and blue accents
+- Glass morphism effects
 - Elegant serif typography (Cinzel & Crimson Text)
 - Smooth animations and transitions
-- Glass morphism effects
-- Decorative elements and ornaments
+- Interactive Leaflet.js map with custom markers
 
-📊 **Data Insights**
-- Total downloads tracking
-- Average monthly downloads
-- Geographic distribution analysis
-- Platform usage breakdown
+## 🛠️ Tech Stack
 
-## Tech Stack
+- **HTML5** - Structure
+- **Tailwind CSS** - Styling and responsive design
+- **Chart.js** - Interactive charts and graphs
+- **Leaflet.js** - Interactive map visualization
+- **Custom CSS** - Glass morphism and animations
 
-- **Framework**: Next.js 14 (React 18)
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts
-- **Icons**: Lucide React
-- **Language**: TypeScript
+## 💻 Getting Started
 
-## Getting Started
+### Local Development
 
-### Prerequisites
+To run locally, simply serve the static files:
 
-- Node.js 18+ installed on your machine
-- npm or yarn package manager
-
-### Installation
-
-1. Clone or download this repository
-
-2. Install dependencies:
+**Using Python:**
 ```bash
-npm install
+python3 -m http.server 8000
+# Open http://localhost:8000
 ```
 
-3. Run the development server:
+**Using Node.js:**
+```bash
+npx http-server
+# Open http://localhost:8080
+```
+
+**Using PHP:**
+```bash
+php -S localhost:8000
+# Open http://localhost:8000
+```
+
+No build process required - just open `index.html` in your browser!
+
+## 🌐 Deploy to Vercel
+
+This project is Vercel-ready! Deploy with one click:
+
+1. Click the "Deploy with Vercel" button above
+2. Connect your GitHub account
+3. Deploy!
+
+Or manually deploy using Vercel CLI:
+Or manually deploy using Vercel CLI:
+
+```bash
+# Install Vercel CLI
+npm i -g vercel
+
+# Navigate to project
+cd "/Users/winstonquartey/Downloads/Podcast 2025 Analytic Dashboard"
+
+# Deploy
+vercel
+
+# Deploy to production
+vercel --prod
+```
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
+
+## 📁 Project Structure
+
+```
+.
+├── index.html          # Main dashboard file (static HTML)
+├── vercel.json         # Vercel configuration
+├── .vercelignore       # Files to ignore during deployment
+├── package.json        # Project metadata
+├── README.md           # This file
+├── DEPLOYMENT.md       # Detailed deployment guide
+└── QUICKSTART.md       # Quick start guide
+```
+
+## 🎨 Customization
+
+### Update Analytics Data
+
+Edit the data arrays in `index.html` (around line 280-310):
+
+**Monthly Downloads:**
+```javascript
+const monthlyData = {
+  labels: ['Dec 24', 'Jan 25', ...],
+  datasets: [{
+    data: [8942, 8492, ...]
+  }]
+};
 ```bash
 npm run dev
 ```
