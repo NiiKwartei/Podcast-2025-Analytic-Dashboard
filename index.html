@@ -525,6 +525,172 @@
         </div>
       </div>
 
+      <!-- Listening Sources Statistics -->
+      <div class="charts-grid mb-12">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Top Sources Chart -->
+          <div class="lg:col-span-2 glass-effect rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 decorative-border animate-fade-in-up" style="animation-delay: 0.7s;">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-gradient-to-br from-primary-600 to-primary-700 text-white shadow-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              </div>
+              <div>
+                <h2 class="text-2xl font-display font-semibold text-white">Top Listening Sources</h2>
+                <p class="text-sm text-slate-400 mt-1">Where listeners discover and play episodes</p>
+              </div>
+            </div>
+            <div class="chart-container">
+              <canvas id="sourcesChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Top Sources List -->
+          <div class="glass-effect rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 decorative-border animate-fade-in-up" style="animation-delay: 0.8s;">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="p-2 rounded-lg bg-gradient-to-br from-accent-600 to-accent-700 text-white shadow-md">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-display font-semibold text-white">Top 10 Sources</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <!-- Apple Podcasts -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Apple Podcasts</span>
+                  <span class="text-sm font-bold text-primary-400">61.36%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary-500 to-primary-400 rounded-full transition-all duration-500" style="width: 61.36%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">95,603 downloads</div>
+              </div>
+
+              <!-- Spotify -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Spotify</span>
+                  <span class="text-sm font-bold text-accent-400">21.99%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-accent-500 to-accent-400 rounded-full transition-all duration-500" style="width: 21.99%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">34,266 downloads</div>
+              </div>
+
+              <!-- Podbean App -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Podbean App</span>
+                  <span class="text-sm font-bold text-primary-300">3.74%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary-400 to-primary-300 rounded-full transition-all duration-500" style="width: 3.74%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">5,822 downloads</div>
+              </div>
+
+              <!-- PodcastAddict -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">PodcastAddict</span>
+                  <span class="text-sm font-bold text-accent-300">3.37%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-accent-400 to-accent-300 rounded-full transition-all duration-500" style="width: 3.37%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">5,256 downloads</div>
+              </div>
+
+              <!-- CastBox -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">CastBox</span>
+                  <span class="text-sm font-bold text-primary-300">1.73%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-primary-300 to-purple-300 rounded-full transition-all duration-500" style="width: 1.73%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">2,696 downloads</div>
+              </div>
+
+              <!-- Android Player -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Android Player</span>
+                  <span class="text-sm font-bold text-slate-300">1.08%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-slate-400 to-slate-300 rounded-full transition-all duration-500" style="width: 1.08%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">1,685 downloads</div>
+              </div>
+
+              <!-- Google Chrome -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Google Chrome</span>
+                  <span class="text-sm font-bold text-slate-300">1.08%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-slate-400 to-slate-300 rounded-full transition-all duration-500" style="width: 1.08%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">1,679 downloads</div>
+              </div>
+
+              <!-- Chromecast -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Chromecast</span>
+                  <span class="text-sm font-bold text-slate-400">0.42%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-slate-500 to-slate-400 rounded-full transition-all duration-500" style="width: 0.42%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">647 downloads</div>
+              </div>
+
+              <!-- Safari -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Safari</span>
+                  <span class="text-sm font-bold text-slate-400">0.34%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-slate-500 to-slate-400 rounded-full transition-all duration-500" style="width: 0.34%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">533 downloads</div>
+              </div>
+
+              <!-- Alexa -->
+              <div class="group">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="text-sm font-semibold text-slate-300">Alexa</span>
+                  <span class="text-sm font-bold text-slate-400">0.32%</span>
+                </div>
+                <div class="h-2 bg-slate-700/50 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-slate-500 to-slate-400 rounded-full transition-all duration-500" style="width: 0.32%"></div>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">492 downloads</div>
+              </div>
+
+              <!-- Others -->
+              <div class="mt-4 pt-4 border-t border-slate-600/50">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-semibold text-slate-400">Others (33 sources)</span>
+                  <span class="text-sm font-bold text-slate-400">6.57%</span>
+                </div>
+                <div class="text-xs text-slate-500 mt-1">10,262 downloads</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Footer -->
       <footer class="text-center mt-16 pt-8 border-t border-slate-700 animate-fade-in-up" style="animation-delay: 0.6s;">
         <div class="w-12 h-1 bg-gradient-to-r from-transparent via-primary-500 to-transparent mx-auto mb-4"></div>
@@ -600,6 +766,27 @@
       { name: 'Cameroon', downloads: 703, lat: 7.3697, lng: 12.3547 },
       { name: 'Australia', downloads: 670, lat: -25.2744, lng: 133.7751 }
     ];
+
+    // Listening Sources Data
+    const sourcesData = {
+      labels: ['Apple Podcasts', 'Spotify', 'Podbean App', 'PodcastAddict', 'CastBox', 'Android Player', 'Google Chrome', 'Others'],
+      datasets: [{
+        label: 'Downloads',
+        data: [95603, 34266, 5822, 5256, 2696, 1685, 1679, 10262],
+        backgroundColor: [
+          '#8b5cf6',
+          '#3b82f6',
+          '#a78bfa',
+          '#60a5fa',
+          '#c4b5fd',
+          '#93c5fd',
+          '#ddd6fe',
+          '#64748b'
+        ],
+        borderWidth: 0,
+        borderRadius: 8
+      }]
+    };
 
     // Chart configurations
     const chartOptions = {
@@ -705,6 +892,82 @@
               family: "'Crimson Text', serif"
             },
             cornerRadius: 8
+          }
+        }
+      }
+    });
+
+    // Initialize sources chart
+    const sourcesChart = new Chart(document.getElementById('sourcesChart'), {
+      type: 'bar',
+      data: sourcesData,
+      options: {
+        indexAxis: 'x',
+        responsive: true,
+        maintainAspectRatio: true,
+        aspectRatio: 2,
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            backgroundColor: 'rgba(30, 41, 59, 0.95)',
+            titleColor: '#f8fafc',
+            bodyColor: '#e2e8f0',
+            borderColor: '#8b5cf6',
+            borderWidth: 2,
+            padding: 12,
+            displayColors: false,
+            titleFont: {
+              size: 14,
+              family: "'Crimson Text', serif",
+              weight: 'bold'
+            },
+            bodyFont: {
+              size: 13,
+              family: "'Crimson Text', serif"
+            },
+            cornerRadius: 8,
+            callbacks: {
+              afterLabel: function(context) {
+                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                const percentage = ((context.raw / total) * 100).toFixed(2);
+                return percentage + '% of total';
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            grid: {
+              color: 'rgba(148, 163, 184, 0.15)',
+              lineWidth: 1
+            },
+            ticks: {
+              font: {
+                family: "'Crimson Text', serif",
+                size: 12
+              },
+              color: '#cbd5e1',
+              callback: function(value) {
+                return value.toLocaleString();
+              }
+            }
+          },
+          x: {
+            grid: {
+              display: false
+            },
+            ticks: {
+              font: {
+                family: "'Crimson Text', serif",
+                size: 11
+              },
+              color: '#cbd5e1',
+              maxRotation: 45,
+              minRotation: 45
+            }
           }
         }
       }
